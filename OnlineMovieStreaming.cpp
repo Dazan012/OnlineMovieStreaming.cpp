@@ -33,3 +33,8 @@ private:
     std::vector<Movie> movies;
 
 public:
+    void addMovie(const Movie &movie)
+    {
+        movies.push_back(movie);
+        std::cout << "Movie added successfully!\n";
+    }
