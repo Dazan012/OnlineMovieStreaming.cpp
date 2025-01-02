@@ -38,3 +38,20 @@ public:
         movies.push_back(movie);
         std::cout << "Movie added successfully!\n";
     }
+
+    void displayMovies() const
+    {
+        if (movies.empty())
+        {
+            std::cout << "No movies available.\n";
+            return;
+        }
+
+        std::cout << "\nAvailable Movies:\n";
+        for (size_t i = 0; i < movies.size(); ++i)
+        {
+            std::cout << i + 1 << ". ";
+            movies[i].displayInfo();
+            std::cout << "\n";
+        }
+    }
