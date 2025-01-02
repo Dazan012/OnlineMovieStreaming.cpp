@@ -55,3 +55,22 @@ public:
             std::cout << "\n";
         }
     }
+
+    void streamMovie(int index) const
+    {
+        if (index >= 0 && static_cast<std::vector<Movie>::size_type>(index) < movies.size())
+        {
+            std::cout << "Streaming: " << movies[index].getTitle() << "\n";
+            std::cout << "Enjoy your movie!\n";
+        }
+        else
+        {
+            std::cout << "Invalid movie index!\n";
+        }
+    }
+
+    size_t getMoviesCount() const
+    { // Added method to get the count of movies
+        return movies.size();
+    }
+};
