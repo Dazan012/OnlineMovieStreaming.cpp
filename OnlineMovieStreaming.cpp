@@ -26,3 +26,10 @@ public:
         return title;
     }
 };
+
+class StreamingService
+{
+private:
+    std::vector<Movie> movies;
+
+public:
